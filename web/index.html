@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome to Tejiri Productions</title>
+</head>
+<body>
+    <div id="app">
+     <div class="layout">
+        <img :src="image" alt="Tejiri_Logo" :height="h" :width="w">
+      </div>
+      <div class="layout">
+          <div class="card">
+           <h2>{{ msg }}</h2> 
+           <p> The website is currently under maintainance.Official website will be on<br> 26th November 2019.  </p>
+            <p>If you have any inquiries contact us <a style="font-style: italic;color: #000;text-decoration:none" href="mailto:"> here</a></p>
+          </div>
+      </div>
+      <footer>
+          <h4>Powered by <a class="link" href="https://www.alero.co.ke/"> Alero Group</a></h4>
+      </footer>
+    </div>
+    
+    <!--Vue CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+</body>
+</html>
+
+<script src="./main.js"></script>
