@@ -1,5 +1,7 @@
 # tejiri_pwa
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b1e65f70-9d38-4868-bfac-f8f91d6d63ad/deploy-status)](https://app.netlify.com/sites/condescending-hopper-206584/deploys)
+
 ## Project setup
 ```
 npm install
