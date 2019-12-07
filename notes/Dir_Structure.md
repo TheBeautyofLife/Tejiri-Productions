@@ -1,0 +1,44 @@
+``
+
+notes
+public
+    img
+        icons
+    favicon.ico
+    index.html
+    robot.txt
+src
+    assets
+    components
+        Header.vue
+        Footer.vue
+    modules
+        All
+            views
+            All_home.vue
+            router.js
+        Landscape
+            views
+            Landscape_home.vue
+            router.js
+        Photoshoot
+            views
+            Landscape_home.vue
+            router.js
+    plugins
+        vuetify.js
+    router
+        index.js
+    store
+        Auth.js
+        index.js
+    views
+        About.vue
+        Home.vue
+    App.vue
+    main.js
+    registerServiceWorker.js
+    tests
+    web
+
+``
