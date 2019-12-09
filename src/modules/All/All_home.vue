@@ -1,7 +1,7 @@
 <template>
   <v-content>
       <!-- Header menu-->
-      <v-layout row justify-end mt-3 mr-2>
+      <v-layout row justify-center mt-3 mr-1>
          <v-list color="transparent">
            <router-link class="links" :to="All_to">
             <v-list-item >
@@ -41,7 +41,7 @@
       </v-layout>
       <!-- Header menu-->
 
-  <v-container mt-4>
+  <v-container mt-12>
     <div class="mb-4 ml-1 font-weight-medium title">{{ title }}</div>
     <stack
      :column-min-width="350"

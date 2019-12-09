@@ -1,72 +1,87 @@
 <template>
-   <v-toolbar
-   color="transparent" flat>
-      <div class="d-flex align-center">
-      <router-link class="mr-5 link" to="/">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://ik.imagekit.io/qpt2onjfe/Tlogo_cnQmm7JpF.svg"
-          transition="scale-transition"
-          width="160"
-        />
-      </router-link>
-      </div>
+  <v-content>
+       <Header/>
+        <v-container>
+          <v-layout row mt-12>
+            <v-col class="ml-6 mr-5">
+              <p class="title text-uppercase">Contact Form</p>
+              <form style="width:400px">
+                <v-text-field
+                   v-model="email"
+                   label="E-mail"
+                   required
+                ></v-text-field>
+                <v-text-field
+                  v-model="name"
+                  label="Name"
+                  required
+                ></v-text-field>
+                <v-textarea
+                  v-model="msg"
+                  label="Message"
+                  auto-grow
+                ></v-textarea>
+                <v-layout justify-end>
+                   <v-btn class="mr-4" color="#2fe1fd" @click="submit">submit</v-btn>
+                </v-layout>
+               </form>
+            </v-col>
+             <v-col class="ml-6">
+              <p class="title text-uppercase">Details</p>
 
-      <v-spacer></v-spacer>
-      <router-link class="mr-5 link" to="/work"> Work </router-link>
-      <router-link class="mr-5 link" to="/about"> About </router-link>
-      <router-link class="mr-5 link" to="/contact"> Contact </router-link>
-      <router-link class="mr-5 link" to="/service"> Services </router-link>
+              <v-layout row justify-center>
+                <v-btn fab flat color="#4d4d4d" dark>
+                  <v-icon>mdi-phone-in-talk</v-icon>
+                </v-btn>
+                <v-col>
+                  <p class="subtitle font-weight-medium">Phone </p>
+                  <p class="subtitle">0723467888 </p>
+                </v-col>
+              </v-layout>
 
-      <v-dialog v-model="dialog" persistent max-width="400px">
-      <template v-slot:activator="{ on }">
-        <v-btn outlined color="white" class="mr-5 link text-capitalize font-weight-medium" v-on="on"> Login </v-btn>
-      </template>
-        <v-card>
-          <v-card-title>
-            <v-layout column>
-              <span class="headline mb-6">Login </span>
-            </v-layout>
-            </v-card-title>
-        <v-card-text>
-          <form>
-            <v-text-field outlined blue darken-1 label="Email*" required></v-text-field>
-            <v-text-field outlined blue darken-1 label="Password*" type="password" required></v-text-field>
-          <span class="caption">Are you new? Join us <router-link to="/register">here</router-link> </span>
-          <v-spacer/>
-          <v-layout row justify-end>
-            <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="grey lighten-1" text @click="dialog = false">Close</v-btn>
-          <v-btn color="blue darken-1" dark large  @click="dialog = false">Submit</v-btn>
-        </v-card-actions>
+               <v-layout row>
+                <v-btn fab flat color="#4d4d4d" dark>
+                  <v-icon>mdi-email</v-icon>
+                </v-btn>
+                 <v-col>
+                  <p class="subtitle font-weight-medium">Email </p>
+                  <p class="subtitle">lorem@host.com </p>
+                </v-col>
+               </v-layout>
+             </v-col>
           </v-layout>
-         </form>
-        </v-card-text>
-        </v-card>
-      </v-dialog>
-   </v-toolbar>
+        </v-container>
+       <Footer/>
+  </v-content>
 </template>
 
 <script>
-export default {
-  data: () => ({
-    dialog: false
-  })
-}
+import Header from '@/components/Header/Header_2'
+import Footer from '@/components/Footer/Footer'
 
+export default {
+  components: {
+    Header,
+    Footer
+  },
+  data: () => ({
+    name: '',
+    email: '',
+    msg: ''
+  }),
+
+  methods: {
+    submit () {
+      this.name = ''
+      this.email = ''
+      this.checkbox = null
+    }
+  }
+}
 </script>
 
-<style>
-  a.link {
-    color: #fff !important;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
-  }
-router-link-exact-active {
-    color: aqua
-  }
+<style scoped>
+.title {
+  color: #ff3b00 !important;
+}
 </style>

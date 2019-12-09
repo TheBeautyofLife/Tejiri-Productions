@@ -5,9 +5,9 @@
       <router-link class="mr-5 link" to="/">
         <v-img
           alt="Vuetify Logo"
-          class="shrink mr-2"
+          class="shrink mr-2 mt-3 mb-2"
           contain
-          src="https://ik.imagekit.io/qpt2onjfe/Tlogo_cnQmm7JpF.svg"
+          :src="require('../../assets/logo/Logo_title.svg')"
           transition="scale-transition"
           width="190"
         />
@@ -18,7 +18,7 @@
       <router-link class="mr-5 link" to="/work"> Work </router-link>
       <router-link class="mr-5 link" to="/about"> About </router-link>
       <router-link class="mr-5 link" to="/contact"> Contact </router-link>
-      <router-link class="mr-5 link" to="/service"> Services </router-link>
+      <!-- <router-link class="mr-5 link" to="/service"> Services </router-link> -->
 
       <v-dialog v-model="dialog" persistent max-width="400px">
       <template v-slot:activator="{ on }">
@@ -40,7 +40,7 @@
             <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="grey lighten-1" text @click="dialog = false">Close</v-btn>
-          <v-btn color="blue darken-1" dark large  @click="dialog = false">Submit</v-btn>
+          <v-btn color="#2fe1fd" dark large  @click="dialog = false">Submit</v-btn>
         </v-card-actions>
           </v-layout>
          </form>
