@@ -1,6 +1,5 @@
 <template>
   <v-content>
-       <Header/>
         <v-container class="mt-12 mb-10" style="width:700px">
           <v-layout column mt-12 mb-12>
             <v-flex xs12 md4>
@@ -55,18 +54,11 @@
             </v-flex>
           </v-layout>
         </v-container>
-       <Footer/>
   </v-content>
 </template>
 
 <script>
-import Header from '@/components/Header/Header_2'
-import Footer from '@/components/Footer/Footer'
-
 export default {
-  components: {
-    Header,
-    Footer
-  }
+//
 }
 </script>

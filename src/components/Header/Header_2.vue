@@ -1,17 +1,15 @@
 <template>
-   <v-toolbar flat color="#2fe1fd">
-      <div class="d-flex align-center">
-      <router-link class="mr-5 link" to="/">
+   <v-toolbar flat color="transparent" class="mt-3 mb-3">
+      <router-link to="/">
         <v-img
           alt="Vuetify Logo"
-          class="shrink mr-2 mt-3 mb-2"
+          class="ma-10"
           contain
-          :src="require('../../assets/logo/Logo_title_b.svg')"
+          :src="require('../../assets/logo/Logo_title.svg')"
           transition="scale-transition"
-          width="150"
+          width="200"
         />
       </router-link>
-      </div>
 
       <v-spacer></v-spacer>
       <router-link class="mr-5 link" to="/work"> Work </router-link>
@@ -21,7 +19,7 @@
 
       <v-dialog v-model="dialog" persistent max-width="400px">
       <template v-slot:activator="{ on }">
-        <v-btn outlined color="#4a4a54" class="mr-5 link text-capitalize font-weight-medium" v-on="on"> Login </v-btn>
+        <v-btn large rounded outlined color="#4a4a54" class="mr-5 text-capitalize font-weight-medium" v-on="on"> Login </v-btn>
       </template>
         <v-card>
           <v-card-title>

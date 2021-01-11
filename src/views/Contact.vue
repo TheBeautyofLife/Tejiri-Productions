@@ -1,6 +1,5 @@
 <template>
   <v-content>
-       <Header/>
         <v-container>
           <v-layout row mt-12>
             <v-col class="ml-6 mr-5">
@@ -10,19 +9,22 @@
                    v-model="email"
                    label="E-mail"
                    required
+                   outlined
                 ></v-text-field>
                 <v-text-field
                   v-model="name"
                   label="Name"
                   required
+                  outlined
                 ></v-text-field>
                 <v-textarea
                   v-model="msg"
                   label="Message"
                   auto-grow
+                  outlined
                 ></v-textarea>
                 <v-layout justify-end>
-                   <v-btn class="mr-4" color="#2fe1fd" @click="submit">submit</v-btn>
+                   <v-btn large color="#2fe1fd" @click="submit">submit</v-btn>
                 </v-layout>
                </form>
             </v-col>
@@ -51,19 +53,11 @@
              </v-col>
           </v-layout>
         </v-container>
-       <Footer/>
   </v-content>
 </template>
 
 <script>
-import Header from '@/components/Header/Header_2'
-import Footer from '@/components/Footer/Footer'
-
 export default {
-  components: {
-    Header,
-    Footer
-  },
   data: () => ({
     name: '',
     email: '',
